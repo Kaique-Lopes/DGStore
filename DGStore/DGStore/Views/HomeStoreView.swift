@@ -8,14 +8,21 @@
 import Foundation
 import UIKit
 
+protocol HomeStoreViewProtocol: AnyObject {
+    func productDetail()
+}
 class HomeStoreView: UIView {
+    weak var delegate : HomeStoreViewProtocol?
     
+    func delegate(delegate: HomeStoreViewProtocol) {
+        self.delegate = delegate
+    }
     lazy var productLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 30)
-        label.text = "Usuário"
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.text = "Olá, Kaique"
         return label
     }()
     
@@ -25,7 +32,10 @@ class HomeStoreView: UIView {
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: "recharge_banner")
         image.tintColor = .green
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .scaleToFill
+        image.clipsToBounds = true
+        image.layer.cornerRadius = 8
+        image.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tappedProduct)))
         return image
     }()
     
@@ -42,19 +52,27 @@ class HomeStoreView: UIView {
         self.addSubview(productLabel)
         self.addSubview(productImageView)
     }
+    
+    @objc private func tappedProduct(){
+        self.delegate?.productDetail()
+        print("asdads")
+    }
     private func setupConstraints() {
         
         
         self.productLabel.anchor(top: safeAreaLayoutGuide.topAnchor,
                                   left: self.leftAnchor,
                                   paddingTop: 5,
-                                  paddingLeft: 15)
+                                  paddingLeft: 20)
         
         self.productImageView.anchor(top: productLabel.bottomAnchor,
                                      left: self.leftAnchor,
                                      right: self.rightAnchor,
-                                     paddingLeft: 15,
-                                     paddingRight: 15)
+                                     paddingTop: 5,
+                                     paddingLeft: 20,
+                                     paddingRight: 20,
+                                     width: 180,
+                                     height: 180)
         
 //        self.productLabel.anchor(top: <#T##NSLayoutYAxisAnchor?#>, left: <#T##NSLayoutXAxisAnchor?#>, bottom: <#T##NSLayoutYAxisAnchor?#>, right: <#T##NSLayoutXAxisAnchor?#>, paddingTop: <#T##CGFloat#>, paddingLeft: <#T##CGFloat#>, paddingBottom: <#T##CGFloat#>, paddingRight: <#T##CGFloat#>, width: <#T##CGFloat?#>, height: <#T##CGFloat?#>)
      

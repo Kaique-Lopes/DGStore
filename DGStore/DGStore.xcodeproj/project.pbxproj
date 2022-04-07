@@ -18,6 +18,7 @@
 		7C2FF22727FE709300DD679B /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C2FF21C27FE709300DD679B /* Poppins-Bold.ttf */; };
 		7C2FF22827FE709300DD679B /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C2FF21D27FE709300DD679B /* Poppins-SemiBold.ttf */; };
 		7C2FF22C27FE78DC00DD679B /* DetailsStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FF22B27FE78DC00DD679B /* DetailsStoreView.swift */; };
+		7C2FF22E27FE948A00DD679B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FF22D27FE948A00DD679B /* DetailsViewController.swift */; };
 		7CD1B43627EFF9050014C761 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1B43527EFF9050014C761 /* AppDelegate.swift */; };
 		7CD1B43827EFF9050014C761 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1B43727EFF9050014C761 /* SceneDelegate.swift */; };
 		7CD1B43A27EFF9050014C761 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1B43927EFF9050014C761 /* StoreViewController.swift */; };
@@ -38,6 +39,7 @@
 		7C2FF21C27FE709300DD679B /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		7C2FF21D27FE709300DD679B /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		7C2FF22B27FE78DC00DD679B /* DetailsStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsStoreView.swift; sourceTree = "<group>"; };
+		7C2FF22D27FE948A00DD679B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		7CD1B43227EFF9050014C761 /* DGStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD1B43527EFF9050014C761 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CD1B43727EFF9050014C761 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				7CD1B43927EFF9050014C761 /* StoreViewController.swift */,
+				7C2FF22D27FE948A00DD679B /* DetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				7CD1B44A27EFFA510014C761 /* ProductsAPI.swift in Sources */,
 				7C2FF22027FE709300DD679B /* Extension+Button.swift in Sources */,
 				7C2FF21227FE6E0200DD679B /* HomeStoreView.swift in Sources */,
+				7C2FF22E27FE948A00DD679B /* DetailsViewController.swift in Sources */,
 				7CD1B43827EFF9050014C761 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
