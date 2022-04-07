@@ -76,8 +76,6 @@ class HomeStoreView: UIView {
                                      paddingRight: 20,
                                      width: 180,
                                      height: 180)
-        
-//        self.productLabel.anchor(top: <#T##NSLayoutYAxisAnchor?#>, left: <#T##NSLayoutXAxisAnchor?#>, bottom: <#T##NSLayoutYAxisAnchor?#>, right: <#T##NSLayoutXAxisAnchor?#>, paddingTop: <#T##CGFloat#>, paddingLeft: <#T##CGFloat#>, paddingBottom: <#T##CGFloat#>, paddingRight: <#T##CGFloat#>, width: <#T##CGFloat?#>, height: <#T##CGFloat?#>)
-     
+          
     }
 }

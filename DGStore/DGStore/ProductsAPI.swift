@@ -25,6 +25,10 @@ class DigioApi {
                     completion([:], error)
                 }
                 
+                
+                
+                
+                
                 return
             }
             completion([:], error)
