@@ -53,9 +53,12 @@ class HomeStoreView: UIView {
         self.addSubview(productImageView)
     }
     
-    @objc private func tappedProduct(){
+    @objc private func tappedProduct(sender: UITapGestureRecognizer){
+        if sender.state == .ended {
+                                print("UIImageView tapped")
+                        }
         self.delegate?.productDetail()
-        print("asdads")
+        
     }
     private func setupConstraints() {
         

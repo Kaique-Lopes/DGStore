@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		316B0C3AAA38EF5258CAB35A /* Pods_DGStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F0504B38156550FAADDF49 /* Pods_DGStore.framework */; };
 		7C2FF21227FE6E0200DD679B /* HomeStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FF21127FE6E0200DD679B /* HomeStoreView.swift */; };
 		7C2FF22027FE709300DD679B /* Extension+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FF21427FE709300DD679B /* Extension+Button.swift */; };
 		7C2FF22127FE709300DD679B /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FF21527FE709300DD679B /* Custom.swift */; };
@@ -48,6 +49,9 @@
 		7CD1B44127EFF9080014C761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CD1B44327EFF9080014C761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CD1B44927EFFA510014C761 /* ProductsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsAPI.swift; sourceTree = "<group>"; };
+		93A16A44D6420F5CDD2E6E97 /* Pods-DGStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGStore.debug.xcconfig"; path = "Target Support Files/Pods-DGStore/Pods-DGStore.debug.xcconfig"; sourceTree = "<group>"; };
+		C8F0504B38156550FAADDF49 /* Pods_DGStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DGStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D45D3F472745001C722A73E9 /* Pods-DGStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DGStore.release.xcconfig"; path = "Target Support Files/Pods-DGStore/Pods-DGStore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316B0C3AAA38EF5258CAB35A /* Pods_DGStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +106,8 @@
 			children = (
 				7CD1B43427EFF9050014C761 /* DGStore */,
 				7CD1B43327EFF9050014C761 /* Products */,
+				D33497EF53DD0A35E5A7DA2F /* Pods */,
+				9AAB5B0A956E20EF09FD02DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +150,24 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		9AAB5B0A956E20EF09FD02DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8F0504B38156550FAADDF49 /* Pods_DGStore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D33497EF53DD0A35E5A7DA2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93A16A44D6420F5CDD2E6E97 /* Pods-DGStore.debug.xcconfig */,
+				D45D3F472745001C722A73E9 /* Pods-DGStore.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CD1B44627EFF9080014C761 /* Build configuration list for PBXNativeTarget "DGStore" */;
 			buildPhases = (
+				D16B596BE83BF55ADA4A0D59 /* [CP] Check Pods Manifest.lock */,
 				7CD1B42E27EFF9050014C761 /* Sources */,
 				7CD1B42F27EFF9050014C761 /* Frameworks */,
 				7CD1B43027EFF9050014C761 /* Resources */,
@@ -210,6 +236,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D16B596BE83BF55ADA4A0D59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DGStore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7CD1B42E27EFF9050014C761 /* Sources */ = {
@@ -364,6 +415,7 @@
 		};
 		7CD1B44727EFF9080014C761 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93A16A44D6420F5CDD2E6E97 /* Pods-DGStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -391,6 +443,7 @@
 		};
 		7CD1B44827EFF9080014C761 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D45D3F472745001C722A73E9 /* Pods-DGStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

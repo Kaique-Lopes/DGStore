@@ -1,0 +1,6 @@
+framework module Pods_DGStore {
+  umbrella header "Pods-DGStore-umbrella.h"
+
+  export *
+  module * { export * }
+}
