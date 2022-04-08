@@ -11,7 +11,7 @@ import UIKit
 protocol HomeStoreViewProtocol: AnyObject {
     func productDetail()
 }
-class HomeStoreView: UIView {
+class HomeStoreView: UICollectionViewCell {
     weak var delegate : HomeStoreViewProtocol?
     
     func delegate(delegate: HomeStoreViewProtocol) {
@@ -61,7 +61,6 @@ class HomeStoreView: UIView {
         
     }
     private func setupConstraints() {
-        
         
         self.productLabel.anchor(top: safeAreaLayoutGuide.topAnchor,
                                   left: self.leftAnchor,

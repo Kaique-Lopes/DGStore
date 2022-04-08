@@ -23,12 +23,7 @@ class DigioApi {
                     completion(jsonResult, error)
                 } catch {
                     completion([:], error)
-                }
-                
-                
-                
-                
-                
+                }   
                 return
             }
             completion([:], error)
